@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="dv" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ދިވެހި އަދަބީ މަންސަފާ</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+
+        /* ހެޑަރ ފޮޓޯ އެއްކޮށް ފެންނާނެ ގޮތް ހެދުން */
+        .site-header {
+            width: 100%;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: block;
+            line-height: 0;
+        }
+
+        .header-banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        /* ޓެބްތަކުގެ ކޯޑު */
+        .main-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* ބަސް ބަދަލުކުރާ ބައިގެ ސްޓައިލް */
+        .language-wrapper {
+            display: flex;
+            align-items: center;
+            background: #f0f4f8;
+            padding: 5px 15px;
+            border-radius: 5px;
+            border: 1px solid #d1d9e6;
+            cursor: pointer !important;
+            position: relative;
+            z-index: 9999; /* އެހެން އެއްޗެއްގެ ދަށުނުވާނެކަން ކަށަވަރުކުރުމަށް */
+        }
+
+        /* ގޫގުލް ބަޓަން ކްލިކް ކުރެވޭ ގޮތް ހެދުން */
+        #google_translate_element {
+            cursor: pointer !important;
+        }
+
+        #google_translate_element select {
+            cursor: pointer !important;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+        }
+
+        /* ގޫގުލްގެ އިތުރު ބާރ ތައް ފޮރުވުން */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+
+        .lang-text {
+            margin-left: 10px;
+            font-weight: bold;
+            color: #1a237e;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <img src="https://archive.org/download/Mansafa/Mansafa.jpg" alt="ދިވެހި އަދަބީ މަންސަފާ" class="header-banner">
+</header>
+
+<div class="container">
+    <nav class="main-tabs">
+        <button class="tab-btn" style="--bg: #e74c3c;" onclick="showCategory('samasa')">ސަމާސާ އަދަބު</button>
+        <button class="tab-btn" style="--bg: #3498db;" onclick="showCategory('mazumoonu')">މަޒުމޫނު</button>
+        <button class="tab-btn" style="--bg: #2ecc71;" onclick="showCategory('report')">ރިޕޯޓް</button>
+        <button class="tab-btn" style="--bg: #f1c40f;" onclick="showCategory('vaahaka')">ވާހަކަ</button>
+        <button class="tab-btn" style="--bg: #9b59b6;" onclick="showCategory('unsu_category')">އަދަބީ އުންސުރު</button>
+        <button class="tab-btn" style="--bg: #e67e22;" onclick="showCategory('vazan_category')">ވަޒަންބަހުރުވަ</button>
+        <button class="tab-btn" style="--bg: #1a237e; color:white;" onclick="showCategory('extra_info')">އިތުރު މަޢުލޫމާތު</button>
+        
+        <div class="language-wrapper">
+            <span class="lang-text">ބަސް ބަދަލުކުރަން:</span>
+            <div id="google_translate_element"></div>
+        </div>
+    </nav>
+
+    <main id="content-display" style="margin-top: 20px;">
+        <p style="text-align:center; padding: 40px; color: #666; font-size: 18px;">މަތީގައިވާ ބާވަތަކަށް ފިތާލުމުން ތަފްސީލު ފެންނާނެއެވެ.</p>
+    </main>
+</div>
+
+<div id="detailModal" class="modal">
+    <div class="modal-content">
+        <span class="close-text" onclick="closeModal()">ފަހަތަށް ދިޔުމަށް</span>
+        
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'dv', 
+            includedLanguages: 'en,ar,ur,hi', 
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="script.js"></script>
+<div class="scrolling-footer">
+    <div class="scroll-container">
+        <div class="scrolling-text">
+            <a href="mailto:mohamed.zahir@ium.edu.mv" style="color: #3498db; text-decoration: none; font-weight: bold;">
+    mohamed.zahir@ium.edu.mv
+</a>  މިއީ ދިވެހި އަދަބީ އުފެއްދުންތައް ހިމެނުމަށްޓަކައި ފަރުމާކޮށްފައިވާ ވިއުގައެކެވެ. މި ވިއުގާގައިވާ އެއްވެސް އުފެއްދުމާކާ ގުޅޭ ގޮތުން މަޢުލޫމާތެއް އޮޅުންފިލުވަން ބޭނުންވާނަމަ އީ މެއިލެއް ފޮނުވުން އެދެމެވެ. އިރަމާ ޒާހިރު  &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="scrolling-text">
+            <a href="mailto:mohamed.zahir@ium.edu.mv" style="color: #3498db; text-decoration: none; font-weight: bold;">
+    mohamed.zahir@ium.edu.mv
+</a>  މިއީ ދިވެހި އަދަބީ އުފެއްދުންތައް ހިމެނުމަށްޓަކައި ފަރުމާކޮށްފައިވާ ވިއުގައެކެވެ. މި ވިއުގާގައިވާ އެއްވެސް އުފެއްދުމާކާ ގުޅޭ ގޮތުން މަޢުލޫމާތެއް އޮޅުންފިލުވަން ބޭނުންވާނަމަ އީ މެއިލެއް ފޮނުވުން އެދެމެވެ. އިރަމާ ޒާހިރު  &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+</div>
+</body>
+</html>

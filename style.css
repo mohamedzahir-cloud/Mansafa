@@ -1,0 +1,312 @@
+/* 1. މައިގަނޑު ކުލަތަކާއި ސެޓިންގްސް */
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #222;
+    --card-bg: #ffffff;
+    --primary-blue: #1a237e;
+    --secondary-blue: #0d47a1;
+    --nav-bg: #2c3e50;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+}
+
+/* 2. ޖެނެރަލް ސްޓައިލްސް */
+* {
+    box-sizing: border-box;
+    font-family: 'Faruma', 'MV Boli', sans-serif !important;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* 3. ހެޑަރ އަދި ބެނާ */
+.site-header {
+    width: 100%;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 0;
+}
+
+.header-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 4. ނެވިގޭޝަން އަދި ޓެބްތައް */
+nav, .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--nav-bg);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    gap: 10px;
+}
+
+.tab-btn {
+    background-color: var(--bg);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+}
+
+.tab-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 5. ބަސް ބަދަލުކުރާ ބަޓަންގެ ފުރިހަމަ އިޞްލާޙު */
+.language-wrapper {
+    display: flex;
+    align-items: center;
+    background: #ffffff; /* ހުދު ކުލަ */
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer !important;
+    position: relative;
+    z-index: 9999 !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* މައުސް ގެންދިޔުމުން އަންނަ "ލޮޅުން" (Hover Effect) */
+.language-wrapper:hover {
+    transform: scale(1.05); /* އެހެން ބަޓަންތަކެކޭ އެއްގޮތަށް ބޮޑުވުން */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-color: var(--primary-blue);
+}
+
+.lang-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-left: 10px;
+    white-space: nowrap;
+    pointer-events: none; /* ލިޔުމަށް ކްލިކް ނުވެ، ދަށުގައިވާ ބަޓަނަށް ފިތޭގޮތަށް */
+}
+
+/* 6. ގޫގުލް ޓްރާންސްލޭޓްގެ އަސްލު ބަޓަން ކްލިކް ކުރެވޭގޮތް ހެދުން */
+#google_translate_element {
+    display: inline-block !important;
+    cursor: pointer !important;
+}
+
+#google_translate_element select {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    padding: 2px 5px !important;
+    background: #f9f9f9 !important;
+    font-size: 13px !important;
+}
+
+/* 7. މައިގަނޑު ކޮންޓެންޓް ސަރަޙައްދު */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+#content-display {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 400px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: right;
+}
+
+/* ވޯޓަރމާކް ފޮޓޯ */
+#content-display::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://ia600607.us.archive.org/24/items/bodu-mas/bodu%20mas.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* 8. ލިޔުންތަކުގެ ސްޓައިލް */
+h2 {
+    text-align: center !important;
+    color: var(--primary-blue);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.article-text {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #333;
+    direction: rtl;
+}
+
+/* 9. މޮޑަލް (Modal) ސްޓައިލް */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 2% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 850px;
+    border-radius: 15px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: right;
+}
+/* މޮޑަލް ކްލޯސް ބަޓަންގެ ސްޓައިލް */
+.close {
+    float: right; /* މަނިކުފާނުގެ ސައިޓް RTL ވީމާ ކަނާތްފަރާތަށް ގެނައުމަށް */
+    font-size: 40px !important; /* ފާހަގަ ބޮޑުކުރުމަށް */
+    font-weight: bold;
+    color: #e74c3c; /* ރަތް ކުލައެއް ދިނުމަށް */
+    cursor: pointer !important; /* އަތުގެ ނިޝާން ގެނައުމަށް */
+    padding: 10px; /* ކްލިކް ކުރަން ފަސޭހަވާނެހެން ޖާގަ އިތުރުކުރުން */
+    line-height: 1;
+    transition: color 0.2s; /* ކުލަ ބަދަލުވާގޮތް ހެދުން */
+    user-select: none; /* ލިޔުމެއްގެ ގޮތުގައި ސެލެކްޓް ނުވާގޮތަށް */
+}
+
+/* މައުސް ގެންދިޔުމުން ކުލަ ބަދަލުވާގޮތް */
+.close:hover {
+    color: #c0392b;
+    transform: scale(1.1); /* ކުޑަކޮށް ބޮޑުވެލާނެ */
+}
+/* ސްކްރޯލްވާ ފޫޓަރުގެ މައިގަނޑު ބައި */
+.scrolling-footer {
+    width: 100%;
+    overflow: hidden; /* ހަވާސާއިން ބޭރަށްދާ ބައި ފޮރުވަން */
+    background: #2c3e50;
+    color: #ffffff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.scroll-container {
+    display: flex;
+    width: max-content;
+    direction: ltr; /* އެނިމޭޝަން އޮމާންކޮށް ހިންގުމަށް */
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    font-size: 13px;
+    display: inline-block;
+    padding-right: 0;
+    /* 40s ބޭނުންކުރުމުން ވަރަށް އޮމާންކޮށް މަޑުން ދަތުރުކުރާނެ */
+    animation: seamless-scroll 40s linear infinite;
+}
+
+/* ވާތުން ފެށިގެން ކަނާތްފަރާތު ހަވާސާގެ ތެރެއަށް ވަދެގެންދާ އެނިމޭޝަން */
+@keyframes seamless-scroll {
+    0% {
+        /* ފެށޭއިރު ލިޔުންކޮޅު އޮންނާނީ ވާތްފަރާތު ހަވާސާއިން ބޭރުގައި */
+        transform: translateX(-100%);
+    }
+    100% {
+        /* ނިމޭއިރު ލިޔުންކޮޅު އޮންނާނީ ކަނާތްފަރާތު ހަވާސާއިން އެއްކޮށް ބޭރަށް ގޮސްފައި */
+        transform: translateX(100%);
+    }
+}
+
+/* މައުސް ގެންދިޔުމުން ހުއްޓޭގޮތް ހެދުން */
+.scrolling-footer:hover .scrolling-text {
+    animation-play-state: paused;
+}
+.email-link {
+    color: #3498db; /* ނޫކުލަ */
+    font-weight: bold; /* ކުޑަކޮށް ފަލަކޮށްލުމަށް */
+    direction: ltr; /* އީމެއިލް އެޑްރެސް ވާތުން ކަނާތަށް ބެހެއްޓުމަށް */
+    display: inline-block;
+}
+/* ގޫގުލް ބެނާ ފޮރުވުން */
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0px !important; }
+
+/* 1. މަނިކުފާނުގެ އަސްލު ޖަސްޓިފައި ކޯޑު */
+.modal-content div {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: right; 
+}
+
+/* 2. ހުރިހާ ސުރުޚީތައް ސެންޓަރުކޮށް، ފޮޓޯއާ މާ ބޮޑަށް ކައިރިކުރުން */
+.modal-content h1, .modal-content h2, .modal-content h3, #modal-title {
+    text-align: center !important;
+    text-align-last: center !important;
+    /* 🌟 މައިނަސް ނައްތާލައި 10px ނުވަތަ 15px ލުމުން ފޮޓޯ ސުރުޚީގެ ދަށަށް ސިހޭނެއެވެ */
+    margin-bottom: 15px !important; 
+    padding-bottom: 0px !important;
+}
+/* 3. ހުރިހާ ފޮޓޯތައް ސެންޓަރުކޮށް، މަތިންނާއި ތިރިން ހުސްޖާގަ ކުޑަކުރުން */
+.modal-content img {
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 0px !important; 
+    margin-bottom: -15px !important; /* 🚨 މީގެ ސަބަބުން ފޮޓޯ މައްޗަށް ދަމައިގަނެ ސުރުޚީ ފޮރުވަނީ */
+    padding-bottom: 0px !important;
+}
+.close-text {
+    position: absolute;
+    top: 15px;
+    left: 20px; /* 🌟 ދިވެހި ސައިޓަކަށްވާތީ ވާތްފަރާތު މައްޗަށް ޖައްސާލުން */
+    font-family: 'Awahel' or your font, sans-serif; /* މަނިކުފާނު ބޭނުންކުރައްވާ ފޮންޓް */
+    font-size: 16px;
+    color: #333; /* ކުލަ (މިސާލަކަށް ކަޅު ނުވަތަ އަޅި) */
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+/* މައުސް ކައިރިކޮށްލުމުން ރަތްކުލައަށް ބަދަލުވުން */
+.close-text:hover {
+    color: #d9534f; 
+}
