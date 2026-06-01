@@ -21,7 +21,9 @@
     box-sizing: border-box;
     font-family: 'Faruma', 'MV Boli', sans-serif !important;
 }
-
+h1, h2, h3, p, div, span, pre, a {
+    font-family: 'Faruma', sans-serif !important;
+}
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
