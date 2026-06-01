@@ -1,5 +1,5 @@
 /* ގޫގުލް ފޮންޓްސް އިން ފަރުމާ ފޮންޓު ސައިޓަށް ދަމާލުން (އެންމެ މަތީގައި މިއޮންނަންވާނެ) */
-@import url('https://fonts.googleapis.com/css2?family=Faruma&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-lab-thana/1.0.0/Faruma.css');
 /* 1. މައިގަނޑު ކުލަތަކާއި ސެޓިންގްސް */
 :root {
     --bg-color: #f0f2f5;
@@ -19,10 +19,8 @@
 /* 2. ޖެނެރަލް ސްޓައިލްސް */
 * {
     box-sizing: border-box;
-    font-family: 'Faruma', 'MV Boli', sans-serif !important;
-}
-h1, h2, h3, p, div, span, pre, a {
-    font-family: 'Faruma', sans-serif !important;
+    /* 'Faruma' ނުވަތަ 'faruma' ކޮންމެ ނަމަކުން ބްރައުޒާ ކިޔަސް މަސައްކަތްކުރާނެ ގޮތަށް */
+    font-family: 'Faruma', 'faruma', sans-serif !important;
 }
 body {
     background-color: var(--bg-color);
