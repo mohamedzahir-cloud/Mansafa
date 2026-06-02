@@ -3,11 +3,12 @@
    ========================================================================== */
 @font-face {
     font-family: 'Faruma';
-    src: url('https://jawish.org/blog/uploads/Faruma.ttf') format('truetype');
+    src: url('https://fonts.gstatic.com/ea/notosansthaana/v1/NotoSansThaana-Regular.woff2') format('woff2'),
+         url('https://fonts.gstatic.com/ea/notosansthaana/v1/NotoSansThaana-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-lab-thana/1.0.0/Faruma.css');
 /* ==========================================================================
    2. މައިގަނޑު ކުލަތަކާއި ސެޓިންގްސް
    ========================================================================== */
