@@ -1,6 +1,11 @@
-/* ގޫގުލް ފޮންޓްސް އިން ފަރުމާ ފޮންޓު ސައިޓަށް ދަމާލުން (އެންމެ މަތީގައި މިއޮންނަންވާނެ) */
+/* ==========================================================================
+   1. ފަރުމާ ވެބް ފޮންޓު (Web Font) ސައިޓަށް ލޯޑުކުރުން
+   ========================================================================== */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-lab-thana/1.0.0/Faruma.css');
-/* 1. މައިގަނޑު ކުލަތަކާއި ސެޓިންގްސް */
+
+/* ==========================================================================
+   2. މައިގަނޑު ކުލަތަކާއި ސެޓިންގްސް
+   ========================================================================== */
 :root {
     --bg-color: #f0f2f5;
     --text-color: #222;
@@ -16,12 +21,15 @@
     --card-bg: #1e1e1e;
 }
 
-/* 2. ޖެނެރަލް ސްޓައިލްސް */
+/* ==========================================================================
+   3. ޖެނެރަލް ސްޓައިލްސް
+   ========================================================================== */
 * {
     box-sizing: border-box;
     /* 'Faruma' ނުވަތަ 'faruma' ކޮންމެ ނަމަކުން ބްރައުޒާ ކިޔަސް މަސައްކަތްކުރާނެ ގޮތަށް */
     font-family: 'Faruma', 'faruma', sans-serif !important;
 }
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -32,7 +40,9 @@ body {
     transition: background-color 0.3s;
 }
 
-/* 3. ހެޑަރ އަދި ބެނާ */
+/* ==========================================================================
+   4. ހެޑަރ އަދި ބެނާ
+   ========================================================================== */
 .site-header {
     width: 100%;
     background-color: #f0f2f5;
@@ -48,7 +58,9 @@ body {
     display: block;
 }
 
-/* 4. ނެވިގޭޝަން އަދި ޓެބްތައް */
+/* ==========================================================================
+   5. ނެވިގޭޝަން އަދި ޓެބްތައް
+   ========================================================================== */
 nav, .tabs {
     display: flex;
     flex-wrap: wrap;
@@ -79,7 +91,9 @@ nav, .tabs {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* 5. ބަސް ބަދަލުކުރާ ބަޓަންގެ ފުރިހަމަ އިޞްލާޙު */
+/* ==========================================================================
+   6. ބަސް ބަދަލުކުރާ ބަޓަންގެ ފުރިހަމަ އިޞްލާޙު
+   ========================================================================== */
 .language-wrapper {
     display: flex;
     align-items: center;
@@ -110,7 +124,9 @@ nav, .tabs {
     pointer-events: none; /* ލިޔުމަށް ކްލިކް ނުވެ، ދަށުގައިވާ ބަޓަނަށް ފިތޭގޮތަށް */
 }
 
-/* 6. ގޫގުލް ޓްރާންސްލޭޓްގެ އަސްލު ބަޓަން ކްލިކް ކުރެވޭގޮތް ހެދުން */
+/* ==========================================================================
+   7. ގޫގުލް ޓްރާންސްލޭޓްގެ އަސްލު ބަޓަން ކްލިކް ކުރެވޭގޮތް ހެދުން
+   ========================================================================== */
 #google_translate_element {
     display: inline-block !important;
     cursor: pointer !important;
@@ -126,7 +142,9 @@ nav, .tabs {
     font-size: 13px !important;
 }
 
-/* 7. މައިގަނޑު ކޮންޓެންޓް ސަރަޙައްދު */
+/* ==========================================================================
+   8. މައިގަނޑު ކޮންޓެންޓް ސަރަޙައްދު
+   ========================================================================== */
 .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -161,7 +179,9 @@ nav, .tabs {
     z-index: -1;
 }
 
-/* 8. ލިޔުންތަކުގެ ސްޓައިލް */
+/* ==========================================================================
+   9. ލިޔުންތަކުގެ ސްޓައިލް
+   ========================================================================== */
 h2 {
     text-align: center !important;
     color: var(--primary-blue);
@@ -177,7 +197,9 @@ h2 {
     direction: rtl;
 }
 
-/* 9. މޮޑަލް (Modal) ސްޓައިލް */
+/* ==========================================================================
+   10. މޮޑަލް (Modal) ސްޓައިލް އަދި ޖާގަ ކުޑަކުރުމުގެ އިޞްލާޙު
+   ========================================================================== */
 .modal {
     display: none;
     position: fixed;
@@ -201,6 +223,7 @@ h2 {
     overflow-y: auto;
     text-align: right;
 }
+
 /* މޮޑަލް ކްލޯސް ބަޓަންގެ ސްޓައިލް */
 .close {
     float: right; /* މަނިކުފާނުގެ ސައިޓް RTL ވީމާ ކަނާތްފަރާތަށް ގެނައުމަށް */
@@ -210,7 +233,7 @@ h2 {
     cursor: pointer !important; /* އަތުގެ ނިޝާން ގެނައުމަށް */
     padding: 10px; /* ކްލިކް ކުރަން ފަސޭހަވާނެހެން ޖާގަ އިތުރުކުރުން */
     line-height: 1;
-    transition: color 0.2s; /* ކުލަ ބަދަލުވާގޮތް ހެދުން */
+    transition: color 0.2s; /* ކުލަ ބަދަލުވާގޮﺘް ހެދުން */
     user-select: none; /* ލިޔުމެއްގެ ގޮތުގައި ސެލެކްޓް ނުވާގޮތަށް */
 }
 
@@ -219,7 +242,51 @@ h2 {
     color: #c0392b;
     transform: scale(1.1); /* ކުޑަކޮށް ބޮޑުވެލާނެ */
 }
-/* ސްކްރޯލްވާ ފޫޓަރުގެ މައިގަނޑު ބައި */
+
+.close-text {
+    position: absolute;
+    top: 15px;
+    left: 20px; /* ދިވެހި ސައިޓަކަށްވާތީ ވާތްފަރާތު މައްޗަށް ޖައްސާލުން */
+    font-size: 16px;
+    color: #333; /* ކުލަ (މިސާލަކަށް ކަޅު ނުވަތަ އަޅި) */
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+/* މައުސް ކައިރިކޮށްލުމުން ރަތްކުލައަށް ބަދަލުވުން */
+.close-text:hover {
+    color: #d9534f; 
+}
+
+/* މަނިކުފާނުގެ އަސްލު ޖަސްޓިފައި ކޯޑު */
+.modal-content div {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: right; 
+}
+
+/* ހުރިހާ ސުރުޚީތައް ސެންޓަރުކޮށް، ފޮޓޯއާ މާ ބޮޑަށް ކައިރިކުރުން (އިޞްލާޙް ކުރެވިފައި) */
+.modal-content h1, .modal-content h2, .modal-content h3, #modal-title {
+    text-align: center !important;
+    text-align-last: center !important;
+    margin-top: 30px !important;
+    margin-bottom: 0px !important; /* ސުރުޚީގެ ތިރިން ޖާގަ އެއްކޮށް ކަނޑާލުން */
+    padding-bottom: 0px !important;
+}
+
+/* ހުރިހާ ފޮޓޯތައް ސެންޓަރުކޮށް، މަތިންނާއި ތިރިން ހުސްޖާގަ ކުޑަކުރުން (އިޞްލާޙް ކުރެވިފައި) */
+.modal-content img {
+    display: inline-block !important; /* ބްލޮކްގެ ބަދަލުގައި އިންލައިން ބްލޮކަށް ހެދުން */
+    margin: 0 auto !important;
+    margin-top: 0px !important; /* ފޮޓޯ މަތީގައި އިންނަ ޖާގަ 0 ކުރުން */
+    padding-top: 0px !important;
+    margin-bottom: 8px !important; /* ސުރުޚީ ފޮރުވިޔަނުދީ ތިރީގެ ޖާގަ ހަމައަކަށް އެޅުވުން */
+}
+
+/* ==========================================================================
+   11. ސްކްރޯލްވާ ފޫޓަރުގެ ސްޓައިލްސް
+   ========================================================================== */
 .scrolling-footer {
     width: 100%;
     overflow: hidden; /* ހަވާސާއިން ބޭރަށްދާ ބައި ފޮރުވަން */
@@ -263,52 +330,109 @@ h2 {
 .scrolling-footer:hover .scrolling-text {
     animation-play-state: paused;
 }
+
 .email-link {
     color: #3498db; /* ނޫކުލަ */
     font-weight: bold; /* ކުޑަކޮށް ފަލަކޮށްލުމަށް */
     direction: ltr; /* އީމެއިލް އެޑްރެސް ވާތުން ކަނާތަށް ބެހެއްޓުމަށް */
     display: inline-block;
 }
+
 /* ގޫގުލް ބެނާ ފޮރުވުން */
 .goog-te-banner-frame.skiptranslate { display: none !important; }
 body { top: 0px !important; }
 
-/* 1. މަނިކުފާނުގެ އަސްލު ޖަސްޓިފައި ކޯޑު */
-.modal-content div {
-    text-align: justify;
-    text-justify: inter-word;
-    text-align-last: right; 
+/* ==========================================================================
+   12. އައު އީޖާދީ ކުއިޒް (Quiz) ގެ ސްޓައިލްސް
+   ========================================================================== */
+#quiz-wrapper {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: right;
+    direction: rtl;
 }
 
-/* 2. ހުރިހާ ސުރުޚީތައް ސެންޓަރުކޮށް، ފޮޓޯއާ މާ ބޮޑަށް ކައިރިކުރުން */
-.modal-content h1, .modal-content h2, .modal-content h3, #modal-title {
-    text-align: center !important;
-    text-align-last: center !important;
-    /* 🌟 މައިނަސް ނައްތާލައި 10px ނުވަތަ 15px ލުމުން ފޮޓޯ ސުރުޚީގެ ދަށަށް ސިހޭނެއެވެ */
-    margin-bottom: 15px !important; 
-    padding-bottom: 0px !important;
+.quiz-status {
+    font-size: 15px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
-/* 3. ހުރިހާ ފޮޓޯތައް ސެންޓަރުކޮށް، މަތިންނާއި ތިރިން ހުސްޖާގަ ކުޑަކުރުން */
-.modal-content img {
-    display: block !important;
-    margin: 0 auto !important;
-    margin-top: 0px !important; 
-    margin-bottom: -15px !important; /* 🚨 މީގެ ސަބަބުން ފޮޓޯ މައްޗަށް ދަމައިގަނެ ސުރުޚީ ފޮރުވަނީ */
-    padding-bottom: 0px !important;
+
+.quiz-card {
+    background: var(--card-bg, #ffffff);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
 }
-.close-text {
-    position: absolute;
-    top: 15px;
-    left: 20px; /* 🌟 ދިވެހި ސައިޓަކަށްވާތީ ވާތްފަރާތު މައްޗަށް ޖައްސާލުން */
-    font-family: 'Awahel' or your font, sans-serif; /* މަނިކުފާނު ބޭނުންކުރައްވާ ފޮންޓް */
+
+#question-text {
+    color: var(--text-color, #2c3e50);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: var(--card-bg, #fff);
+    color: var(--text-color, #2d3748);
+    text-align: right;
+    cursor: pointer;
     font-size: 16px;
-    color: #333; /* ކުލަ (މިސާލަކަށް ކަޅު ނުވަތަ އަޅި) */
+    transition: all 0.2s ease;
+}
+
+.option-btn.selected {
+    background: #fef3c7;
+    border-color: #f59e0b;
+    color: #b45309;
+    font-weight: bold;
+}
+
+#feedback-box {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.feedback-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.feedback-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.quiz-action {
+    margin-top: 20px;
+}
+
+#action-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    color: white;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: color 0.2s;
-}
-
-/* މައުސް ކައިރިކޮށްލުމުން ރަތްކުލައަށް ބަދަލުވުން */
-.close-text:hover {
-    color: #d9534f; 
+    transition: background 0.3s ease;
 }
