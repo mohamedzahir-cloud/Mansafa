@@ -1,14 +1,17 @@
 /* ==========================================================================
    1. ފަރުމާ ފޮންޓު ސީދާ ދިވެހި ސާވަރަކުން ލޯޑުކުރުން (100% ފޯނަށް މަސައްކަތްކުރާނެ)
    ========================================================================== */
+/* ==========================================================================
+   1. ގިޓްހަބް ފޯލްޑަރުން ފަރުމާ ފޮންޓު ލޯޑުކުރުން
+   ========================================================================== */
 @font-face {
     font-family: 'Faruma';
-    src: url('https://fonts.gstatic.com/ea/notosansthaana/v1/NotoSansThaana-Regular.woff2') format('woff2'),
-         url('https://fonts.gstatic.com/ea/notosansthaana/v1/NotoSansThaana-Regular.woff') format('woff');
+    src: url('fonts/Faruma.woff2') format('woff2'),
+         url('fonts/faruma.woff') format('woff'),
+         url('fonts/faruma.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-lab-thana/1.0.0/Faruma.css');
 /* ==========================================================================
    2. މައިގަނޑު ކުލަތަކާއި ސެޓިންގްސް
    ========================================================================== */
